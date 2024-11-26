@@ -1,0 +1,173 @@
+/* --- Адаптивність для різних розмірів екранів --- */
+
+/* Для екранів більше 1600px (великі екрани) */
+@media (min-width: 1600px) {
+    .hero-section h1 {
+        font-size: 4rem; /* Великий текст для великих екранів */
+    }
+
+    .hero-section p {
+        font-size: 2rem;
+    }
+
+    .hero-section button {
+        font-size: 1.5rem;
+        padding: 15px 30px;
+    }
+
+    .menu-item {
+        max-width: 350px; /* Збільшуємо ширину карток меню */
+    }
+
+    .stats-content, .stats {
+        gap: 40px; /* Більші відступи між блоками */
+    }
+
+    .stats h3 {
+        font-size: 2.5rem; /* Збільшуємо цифри в статистиці */
+    }
+}
+
+/* Для екранів від 1200px до 1600px (стандартні десктопи) */
+@media (max-width: 1600px) and (min-width: 1200px) {
+
+    .stats {
+        grid-template-columns: repeat(4, 1fr); /* Статистика в чотири стовпці */
+    }
+}
+
+/* Для екранів від 992px до 1200px (ноутбуки) */
+@media (max-width: 1200px) and (min-width: 992px) {
+    .menu-grid {
+        grid-template-columns: repeat(3, 1fr); /* Три колонки на ноутбуках */
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(3, 1fr); /* Галерея у три стовпці */
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr); /* Три стовпці статистики */
+    }
+}
+
+/* Для екранів від 768px до 992px (планшети) */
+@media (max-width: 992px) and (min-width: 768px) {
+    /* Live Section */
+    .videoAndText-block {
+        flex-direction: column; /* Вертикальне розташування */
+        gap: 30px; /* Більший відступ між відео та текстом */
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці для меню */
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Галерея у два стовпці */
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці для статистики */
+    }
+
+    .stats-content {
+        flex-direction: column; /* Вертикальний текстовий блок */
+        text-align: center; /* Центруємо текст */
+    }
+
+    .text-video {
+        max-width: 90%; /* Збільшуємо ширину тексту для читабельності */
+    }
+}
+
+/* Для екранів від 480px до 768px (смартфони в горизонтальній орієнтації) */
+@media (max-width: 768px) and (min-width: 480px) {
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2.5rem; /* Зменшений розмір тексту */
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    /* Menu Section */
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці на горизонтальних смартфонах */
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці для галереї */
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr); /* Два стовпці статистики */
+    }
+}
+
+/* Для екранів менше 480px (смартфони у вертикальній орієнтації) */
+@media (max-width: 480px) {
+    /* Hero Section */
+    .hero-section h1 {
+        font-size: 2rem; /* Ще менший розмір заголовка */
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+   
+        /* Блок із текстом та відео */
+        .videoAndText-block {
+            flex-direction: column; /* Розташування блоків вертикально */
+            align-items: center; /* Центрування вмісту */
+            gap: 20px; /* Відступ між текстом і відео */
+        }
+    
+        .text-video {
+            max-width: 90%; /* Текст займає більшу частину ширини */
+            font-size: 1rem; /* Зменшений розмір тексту */
+            line-height: 1.6; /* Щільніше міжрядковий інтервал */
+            text-align: center; /* Текст вирівнюється по центру */
+            margin: 0 auto; /* Відступи для центрування */
+        }
+    
+        video {
+            max-width: 100%; /* Відео займає всю ширину */
+            height: auto; /* Зберігає пропорції */
+            border-radius: 10px; /* Заокруглення країв */
+        }
+    
+    
+
+    /* Menu Section */
+    .menu-grid {
+        grid-template-columns: 1fr; /* Один стовпець для меню */
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr; /* Один стовпець для галереї */
+    }
+
+    .stats {
+        grid-template-columns: 1fr; /* Один стовпець для статистики */
+    }
+
+    .stats-content {
+        flex-direction: column; /* Вертикальне розташування */
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr; /* Один стовпець для блогу */
+    }
+
+    .blog-item img {
+        height: auto; /* Картинка автоматично підлаштовується */
+    }
+}

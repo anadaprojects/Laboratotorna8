@@ -1,0 +1,310 @@
+/* styles.css */
+    body {
+        font-family: 'Poppins', Arial, sans-serif; /* Застосування шрифту */
+        line-height: 1.8; /* Збільшений інтервал між рядками для кращої читабельності */
+        margin: 0;
+        padding: 0;
+        color: #333; /* Трохи затемнений текст для більшого контрасту */
+        background-color: #f9f9f9; /* Світлий фон */
+    }
+    
+
+h1, h2 {
+    text-align: center;
+}
+/* Hero Section */
+.hero-section {
+    background: url(../images/cappuccino3-min.jpg) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Темна прозорість поверх зображення */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-section button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-section button:hover {
+    background-color: #5a3c2d;
+}
+
+button {
+    background-color: #6f4e37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #5a3c2d;
+}
+
+
+/* Live Section */
+.live-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.live-section .video {
+    margin: 20px auto;
+    max-width: 90%;
+}
+.text-video{
+max-width: 50%; /* Максимальна ширина текстового блоку */
+text-align: left;
+font-size: 1.1rem;
+line-height: 1.8; /* Збільшений інтервал для кращої читабельності */
+color: #555; /* Нейтральний сірий текст */
+}
+.videoAndText-block{
+    display: flex;
+    flex-direction: row; /* Горизонтальне розташування тексту і відео */
+    justify-content: space-between; /* Простір між текстом і відео */
+    align-items: center; /* Вирівнювання по центру */
+    gap: 20px; /* Відстань між текстом і відео */
+    padding: 40px;
+    background-color: #ffffff; /* Білий фон */
+    border-radius: 10px; /* Заокруглені краї */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для стилю */
+    max-width: 1200px; /* Центрування блоку */
+    margin: 0 auto;
+}
+
+video {
+    max-width: 45%; /* Максимальна ширина відео */
+    height: auto; /* Автоматична висота для збереження пропорцій */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Menu Section */
+.menu-section{
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 стовпці */
+    gap: 20px; /* Відстань між картками */
+    justify-items: center; /* Центрування карток */
+    align-items: start; /* Вирівнювання карток по верхньому краю */
+}
+
+.menu-item {
+    background-color: #fff; /* Білий фон картки */
+    padding: 20px;
+    border-radius: 10px; /* Заокруглені кути */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легка тінь */
+    text-align: center;
+    width: 100%; /* Ширина картки */
+    max-width: 300px; /* Максимальна ширина картки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px); /* Легке підняття при наведенні */
+    box-shadow: 0 8px 15px rgba(198, 112, 21, 0.2); /* Більша тінь при наведенні */
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.menu-item p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #6f4e37; /* Колір для ціни */
+}
+
+
+/* Images Section */
+.images-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.image-gallery {
+    display: grid; /* Сітка для вирівнювання */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Картинки автоматично адаптуються */
+    gap: 20px; /* Відстань між картинками */
+    justify-content: center; /* Центрування галереї */
+}
+
+.image-gallery img {
+    width: 100%; /* Картинка займатиме всю ширину блоку */
+    height: 200px; /* Фіксована висота для уніфікації */
+    border-radius: 10px; /* Заокруглення */
+    object-fit: cover; /* Забезпечує правильне співвідношення сторін */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь для картинок */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анімація при наведенні */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05); /* Збільшення при наведенні */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Більша тінь при наведенні */
+}
+
+
+/* Stats Section */
+/* Stats Section */
+.stats-section {
+    padding: 40px;
+    background-color: #6f4e37; /* Коричневий фон */
+    color: white;
+    text-align: center;
+    border-radius: 10px; /* Заокруглені краї */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Легка тінь */
+}
+
+.stats-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #fff; /* Білий текст */
+}
+
+.stats-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #dcdcdc; /* Світло-сірий текст */
+}
+
+/* Блок із текстом */
+.stats-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.stat-item {
+    max-width: 45%; /* Кожен блок займає половину */
+    text-align: left;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #f7c744; /* Золотистий колір іконки */
+    margin-bottom: 10px;
+}
+
+.stat-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 1rem;
+    color: #dcdcdc;
+}
+
+/* Блок зі статистикою */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивна сітка */
+    gap: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat h3 {
+    font-size: 2rem;
+    color: #f7c744; /* Золотистий колір для чисел */
+    margin-bottom: 5px;
+}
+
+.stat p {
+    font-size: 1rem;
+    color: #dcdcdc; /* Світло-сірий текст */
+}
+
+
+/* Blog Section */
+.blog-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-item {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.blog-item img {
+    width: 100%;
+    height: 600px;
+    border-radius: 8px 8px 0 0;
+}
+
+.blog-item h3 {
+    margin: 10px 0;
+}
+
+.blog-item p {
+    font-size: 14px;
+    color: #666;
+}
